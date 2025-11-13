@@ -96,7 +96,7 @@
             <div class="relative flex justify-center md:justify-end">
                 <div class="w-full max-w-md h-[400px] bg-primary rounded-[3rem] overflow-hidden shadow-2xl custom-shadow relative">
                     <!-- Placeholder Image - Replace with actual professional photo URL -->
-                    <img src="img/about/money3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/065F46/ffffff?text=Omoefe'" alt="Professional photo of Omoefe Orobator, Financial Educator" class="w-full h-full object-cover opacity-80">
+                    <img src="img/about/money3.jpg" onerror="this.onerror=null;this.src='img/about/money3.jpg'" alt="Professional photo of Omoefe Orobator, Financial Educator" class="w-full h-full object-cover opacity-80">
                     <div class="absolute inset-0 flex items-end p-8 bg-black/30">
                         <h2 class="text-white text-4xl font-black tracking-widest uppercase leading-snug">
                             Financial <br> Literacy <br> Expert
@@ -278,22 +278,22 @@
                 <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Moments from Our Events</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                        <img src="https://placehold.co/600x400/065F46/ffffff?text=Event+1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/065F46/ffffff?text=Event+1'" alt="Event highlight photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/FBBF24/000000?text=Event+2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBBF24/000000?text=Event+2'" alt="Event highlight photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/10B981/ffffff?text=Event+3" onerror="this.onerror=null;this.src='https://placehold.co/600x400/10B981/ffffff?text=Event+3'" alt="Event highlight photo 3" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/F472B6/ffffff?text=Event+4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/F472B6/ffffff?text=Event+4'" alt="Event highlight photo 4" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="img/about/Money3LitImage.jpg" onerror="this.onerror=null;this.src='img/about/Money3LitImage.jpg'" alt="Event highlight photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="img/about/MoneyLitImage.jpg" onerror="this.onerror=null;this.src='img/about/MoneyLitImage.jpg'" alt="Event highlight photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="img/about/MoneyLit6.jpg" onerror="this.onerror=null;this.src='img/about/MoneyLit6.jpg'" alt="Event highlight photo 3" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="img/about/Moneylit5.jpg" onerror="this.onerror=null;this.src='img/about/Moneylit5.jpg'" alt="Event highlight photo 4" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
                     </div>
                 </div>
 
                 <!-- Speaking Engagements -->
-                <div>
+                <!-- <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Speaking Engagements</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                         <img src="https://placehold.co/600x400/38A169/ffffff?text=Speaker+1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/38A169/ffffff?text=Speaker+1'" alt="Speaking engagement photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
                         <img src="https://placehold.co/600x400/8B5CF6/ffffff?text=Speaker+2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B5CF6/ffffff?text=Speaker+2'" alt="Speaking engagement photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
                         <img src="https://placehold.co/600x400/047857/ffffff?text=Community+Impact" onerror="this.onerror=null;this.src='https://placehold.co/600x400/047857/ffffff?text=Community+Impact'" alt="Community Impact photo" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
