@@ -96,7 +96,7 @@
             <div class="relative flex justify-center md:justify-end">
                 <div class="w-full max-w-md h-[400px] bg-primary rounded-[3rem] overflow-hidden shadow-2xl custom-shadow relative">
                     <!-- Placeholder Image - Replace with actual professional photo URL -->
-                    <img src="https://placehold.co/800x1200/065F46/ffffff?text=Omoefe+Orobator" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/065F46/ffffff?text=Omoefe'" alt="Professional photo of Omoefe Orobator, Financial Educator" class="w-full h-full object-cover opacity-80">
+                    <img src="img/about/money3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/065F46/ffffff?text=Omoefe'" alt="Professional photo of Omoefe Orobator, Financial Educator" class="w-full h-full object-cover opacity-80">
                     <div class="absolute inset-0 flex items-end p-8 bg-black/30">
                         <h2 class="text-white text-4xl font-black tracking-widest uppercase leading-snug">
                             Financial <br> Literacy <br> Expert
@@ -259,11 +259,21 @@
                 <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Our Educators</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                        <img src="educators/AbisolaAdeniji.jpg" onerror="this.onerror=null;this.src='educators/AbisolaAdeniji.jpg'" alt="Event highlight photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="educators/BiyiMomoh.jpg" onerror="this.onerror=null;this.src='educators/BiyiMomoh.jpg'" alt="Event highlight photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="educators/HenryAliemeke.jpg" onerror="this.onerror=null;this.src='educators/HenryAliemeke.jpg'" alt="Event highlight photo 3" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <div class="flex flex-col items-center">
+                            <img src="educators/AbisolaAdeniji.jpg" onerror="this.onerror=null;this.src='educators/AbisolaAdeniji.jpg'" alt="Abisola Adeniji" class="w-full max-h-full object-contain rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <span class="mt-2 text-center text-lg font-semibold">Abisola Adeniji</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="educators/BiyiMomoh.jpg" onerror="this.onerror=null;this.src='educators/BiyiMomoh.jpg'" alt="Biyi Momoh" class="w-full max-h-full object-contain rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <span class="mt-2 text-center text-lg font-semibold">Biyi Momoh</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="educators/HenryAliemeke.jpg" onerror="this.onerror=null;this.src='educators/HenryAliemeke.jpg'" alt="Henry Aliemeke" class="w-full max-h-full object-contain rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <span class="mt-2 text-center text-lg font-semibold">Henry Aliemeke</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Moments from Our Events -->
                 <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Moments from Our Events</h3>
