@@ -255,6 +255,15 @@
             <h2 class="text-5xl font-extrabold text-center mb-16 color-primary">Gallery & Highlights</h2>
 
             <div class="space-y-16">
+                <!-- Educators from Our Events -->
+                <div>
+                    <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Our Educators</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <img src="educators/AbisolaAdeniji.jpg" onerror="this.onerror=null;this.src='educators/AbisolaAdeniji.jpg'" alt="Event highlight photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="educators/BiyiMomoh.jpg" onerror="this.onerror=null;this.src='educators/BiyiMomoh.jpg'" alt="Event highlight photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <img src="educators/HenryAliemeke.jpg" onerror="this.onerror=null;this.src='educators/HenryAliemeke.jpg'" alt="Event highlight photo 3" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                    </div>
+                </div>
                 <!-- Moments from Our Events -->
                 <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Moments from Our Events</h3>
