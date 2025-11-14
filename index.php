@@ -125,7 +125,7 @@
                 <div class="md:col-span-8 space-y-10">
                     <div class="text-xl leading-relaxed text-gray-700 space-y-6">
                         <p>Omoefe Orobator is a Certified Finance Analyst, Wealth Manager and Chartered Accountant passionate about transforming how Africans think about money. With over five years of experience in finance and wealth management, she helps individuals and business owners build intentional, income-generating portfolios.</p>
-                        <p>Omoefe combines professional expertise with a heart for impact. She has shared her insights across platforms in Nigeria, the U.S., and Kenya — simplifying finance and making it relatable to everyday people. Through **Money Lit Africa**, she's building a movement that bridges financial literacy gaps and inspires people to make smarter financial decisions.</p>
+                        <p>Omoefe combines professional expertise with a heart for impact. She has shared her insights across platforms in Nigeria, the U.S., and Kenya — simplifying finance and making it relatable to everyday people. Through <bold>Money Lit Africa</bold>, she's building a movement that bridges financial literacy gaps and inspires people to make smarter financial decisions.</p>
                     </div>
 
                     <!-- Quote Section - Prominent Design -->
@@ -286,14 +286,62 @@
                 </div>
 
                 <!-- Speaking Engagements -->
-                <!-- <div>
+                <div>
                     <h3 class="text-3xl font-bold color-primary mb-8 border-b-2 border-amber-300 inline-block pb-1">Speaking Engagements</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                        <img src="https://placehold.co/600x400/38A169/ffffff?text=Speaker+1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/38A169/ffffff?text=Speaker+1'" alt="Speaking engagement photo 1" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/8B5CF6/ffffff?text=Speaker+2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B5CF6/ffffff?text=Speaker+2'" alt="Speaking engagement photo 2" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/047857/ffffff?text=Community+Impact" onerror="this.onerror=null;this.src='https://placehold.co/600x400/047857/ffffff?text=Community+Impact'" alt="Community Impact photo" class="w-full h-48 object-cover rounded-xl shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                        <!-- Video 1 -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <video controls class="w-full h-48 object-cover">
+                                <source src="img/speaking/SpeakingGig.mp4" type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Speaker 1</span> -->
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <img src="img/speaking/MumFundEvent.jpg" alt="Speaking engagement photo 2" class="w-full h-48 object-cover" />
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Speaker 2</span> -->
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <video controls class="w-full h-48 object-cover">
+                                <source src="img/speaking/SpeakingGig2.mp4" type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Community Impact</span> -->
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <video controls class="w-full h-48 object-cover">
+                                <source src="img/speaking/SpeakingGig3.mp4" type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Community Impact</span> -->
+                        </div>
+
+                        <!-- Video 4 -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <video controls class="w-full h-48 object-cover">
+                                <source src="img/speaking/SpeakingGig4.mp4" type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Community Impact</span> -->
+                        </div>
+
+                        <!-- Video 5 -->
+                        <div class="flex flex-col items-center rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                            <video controls class="w-full h-48 object-cover">
+                                <source src="img/speaking/SpeakingGig5.mp4" type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                            <!-- <span class="mt-2 text-center text-lg font-semibold">Community Impact</span> -->
+                        </div>
                     </div>
-                </div> -->
+                </div>
+
             </div>
         </section>
 
