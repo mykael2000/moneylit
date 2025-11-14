@@ -57,7 +57,7 @@
                     ON FINANCE
                 </a>
                 <a href="#about" class="hover:text-amber-500 transition duration-300">About Omoefe</a>
-                <a href="#events" class="hover:text-amber-500 transition duration-300">Impact</a>
+                <a href="educators.php" class="hover:text-amber-500 transition duration-300">Educators</a>
                 <a href="#vision" class="hover:text-amber-500 transition duration-300">Vision</a>
                 <a href="#gallery" class="hover:text-amber-500 transition duration-300">Highlights</a>
                 <a href="#contact" class="px-5 py-2 rounded-full bg-primary text-white font-bold hover:bg-emerald-900 transition duration-300 custom-shadow">Collaborate</a>
