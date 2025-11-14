@@ -1,78 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Lit Africa - Financial Empowerment for the Continent</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles for professional feel and smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Very light, inviting background */
-        }
-        /* Creative Color Palette based on a refined African theme */
-        .color-primary { color: #065F46; /* Deep Emerald Green */ }
-        .bg-primary { background-color: #065F46; }
-        .bg-secondary { background-color: #FBBF24; /* Vibrant Amber Gold */ }
-        
-        /* Custom Shadow for a premium, floating look */
-        .custom-shadow {
-            box-shadow: 0 15px 30px -10px rgba(6, 95, 70, 0.2), 0 6px 15px -4px rgba(6, 95, 70, 0.1);
-            transition: all 0.3s ease;
-        }
-        .custom-shadow:hover {
-            box-shadow: 0 20px 40px -10px rgba(6, 95, 70, 0.35), 0 8px 20px -5px rgba(6, 95, 70, 0.2);
-            transform: translateY(-4px);
-        }
-
-        /* Gradient for the Hero Section */
-        .hero-gradient {
-            background: linear-gradient(135deg, #f8f8f8 50%, #E0F2F1 100%);
-        }
-
-        /* Playfair Display for headers */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-    </style>
-</head>
-<body class="text-gray-900">
-
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-            <a href="#home" class="text-3xl font-black color-primary tracking-tight">
-                Money Lit Africa
-            </a>
-            <div class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="#about" class="hover:text-amber-500 transition duration-300">About Omoefe</a>
-                <a href="#events" class="hover:text-amber-500 transition duration-300">Impact</a>
-                <a href="#vision" class="hover:text-amber-500 transition duration-300">Vision</a>
-                <a href="#gallery" class="hover:text-amber-500 transition duration-300">Highlights</a>
-                <a href="#contact" class="px-5 py-2 rounded-full bg-primary text-white font-bold hover:bg-emerald-900 transition duration-300 custom-shadow">Collaborate</a>
-            </div>
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden p-2 text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl py-4 absolute w-full">
-            <a href="#about" class="block px-6 py-2 text-base text-gray-700 hover:bg-emerald-50 border-b border-gray-100">About Omoefe</a>
-            <a href="#events" class="block px-6 py-2 text-base text-gray-700 hover:bg-emerald-50 border-b border-gray-100">Events & Impact</a>
-            <a href="#vision" class="block px-6 py-2 text-base text-gray-700 hover:bg-emerald-50 border-b border-gray-100">Vision</a>
-            <a href="#gallery" class="block px-6 py-2 text-base text-gray-700 hover:bg-emerald-50 border-b border-gray-100">Highlights</a>
-            <a href="#contact" class="block px-6 py-3 text-base text-white bg-primary mx-4 my-3 rounded-xl text-center font-bold">Collaborate Now</a>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<?php include("header.php"); ?>
 
         <!-- 1. Home Page (Hero Section) - Visually Creative and Bold -->
         <section id="home" class="hero-gradient pt-24 pb-24 md:pt-32 md:pb-40 grid md:grid-cols-2 gap-16 items-center rounded-b-[4rem]">
@@ -144,27 +70,6 @@
             <h2 class="text-5xl font-extrabold text-center mb-16 color-primary">Our Impact in Action</h2>
 
             <div class="grid gap-12 lg:grid-cols-3">
-                
-                <!-- International Women’s Day Financial Literacy Event -->
-                <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-pink-500 custom-shadow">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="text-4xl">🌸</span>
-                        <h3 class="text-2xl font-bold text-pink-600">IWD Financial Literacy Event</h3>
-                    </div>
-                    <p class="text-lg font-semibold text-gray-700 mb-6">Theme: Empowered Women, Empowered Finances</p>
-                    <div class="space-y-4 text-gray-600 text-base">
-                        <p>In celebration of International Women’s Day, we brought together women professionals and entrepreneurs for honest conversations about wealth creation and financial independence.</p>
-                        <h4 class="text-lg font-extrabold color-primary pt-2">Key Highlights:</h4>
-                        <ul class="list-none space-y-2 text-sm ml-0">
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>Panel discussions on investing</li>
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>Networking and mentorship</li>
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>50+ participants empowered</li>
-                        </ul>
-                        <a href="#gallery" class="mt-4 block w-full text-center px-4 py-3 bg-pink-500 text-white font-semibold rounded-xl hover:bg-pink-600 transition duration-300">
-                            See Photo Highlights
-                        </a>
-                    </div>
-                </div>
 
                 <!-- Digital Professional Fair (2025) -->
                 <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-blue-500 custom-shadow">
@@ -187,21 +92,6 @@
                     </div>
                 </div>
 
-                <!-- Financial Literacy Conversations -->
-                <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-secondary custom-shadow">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="text-4xl">💬</span>
-                        <h3 class="text-2xl font-bold text-amber-600">Community Conversations</h3>
-                    </div>
-                    <p class="text-lg font-semibold text-gray-700 mb-6">Informal Sessions, Real Impact</p>
-                    <div class="space-y-4 text-gray-600 text-base">
-                        <p>We regularly host informal or community sessions both online and offline, emphasizing my role as a thought leader driving critical conversations around wealth, investing, and economic empowerment across Africa.</p>
-                        <p class="pt-2">Join us to get involved in the discussion and start making measurable progress on your financial goals.</p>
-                        <a href="#contact" class="mt-6 block w-full text-center px-4 py-3 bg-secondary color-primary font-bold rounded-xl hover:bg-amber-400 transition duration-300">
-                            Connect on Social Media &rarr;
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -426,69 +316,4 @@
         </section>
 
     </main>
-
-    <!-- Simple Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2025 Money Lit Africa. All Rights Reserved. | Empowering Your Financial Story.</p>
-        </div>
-    </footer>
-
-    <script>
-        // --- JavaScript for Form Handling and Interactivity ---
-
-        // 1. Handle Contact Form Submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const name = form.name.value;
-            const messageDisplay = document.getElementById('contact-message');
-
-            // Log data to console (simulating submission)
-            console.log('--- Contact Form Submission (Simulated) ---');
-            console.log('Name:', form.name.value);
-            console.log('Email:', form.email.value);
-            console.log('Message:', form.message.value);
-
-            // Display success message to the user
-            messageDisplay.textContent = 'Success! Thank you, ' + name.split(' ')[0] + '! Your message has been received.';
-            messageDisplay.classList.remove('hidden', 'text-gray-800');
-            messageDisplay.classList.add('text-green-600', 'font-extrabold');
-            form.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                messageDisplay.classList.add('hidden');
-            }, 5000);
-        });
-
-        // 2. Handle Newsletter Form Submission
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const email = form.querySelector('input[type="email"]').value;
-            const messageDisplay = document.getElementById('newsletter-message');
-
-            console.log('--- Newsletter Subscription (Simulated) ---');
-            console.log('Email:', email);
-
-            // Display success message
-            messageDisplay.textContent = 'Subscribed! Check your inbox for your first intentional insight.';
-            messageDisplay.classList.remove('hidden');
-            form.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                messageDisplay.classList.add('hidden');
-            }, 5000);
-        });
-        
-        // 3. Mobile Navigation Toggle (Ensures menu closes after clicking a link)
-        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-            });
-        });
-    </script>
-</body>
-</html>
+<?php include("footer.php"); ?>
