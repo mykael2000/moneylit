@@ -76,3 +76,4 @@
             <a href="#contact" class="block px-6 py-3 text-base text-white bg-primary mx-4 my-3 rounded-xl text-center font-bold">Collaborate Now</a>
         </div>
     </header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
