@@ -1,5 +1,5 @@
 <?php include("header.php"); ?>
-
+<main>
         <!-- 1. Home Page (Hero Section) - Visually Creative and Bold -->
         <section id="home" class="hero-gradient pt-24 pb-24 md:pt-32 md:pb-40 grid md:grid-cols-2 gap-16 items-center rounded-b-[4rem]">
             <div class="space-y-8">
