@@ -69,7 +69,7 @@
         <section id="events" class="py-24 md:py-36 bg-gray-50 rounded-3xl p-8">
             <h2 class="text-5xl font-extrabold text-center mb-16 color-primary">Our Impact in Action</h2>
 
-            <div class="grid gap-12 lg:grid-cols-3">
+            <div class="grid gap-12 lg:grid-cols-1">
 
                 <!-- Digital Professional Fair (2025) -->
                 <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-blue-500 custom-shadow">
