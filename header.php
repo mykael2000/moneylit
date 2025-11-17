@@ -51,9 +51,8 @@
                 Money Lit Africa
             </a>
             <div class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="onfinance.moneylitafrica.com" 
-                    class="bg-emerald-100 text-emerald-900 px-4 py-2 rounded-lg 
-                            transition-colors duration-300 hover:bg-amber-400 hover:text-emerald-900 font-semibold shadow-sm">
+                <a href="https://onfinance.moneylitafrica.com" 
+                    class="hover:text-amber-500 transition duration-300">
                     ON FINANCE
                 </a>
                 <a href="#about" class="hover:text-amber-500 transition duration-300">About Omoefe</a>
