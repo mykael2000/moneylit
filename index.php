@@ -296,4 +296,115 @@
                 </div>
             </div>
         </section>
+        <!-- Calendly Booking Section -->
+        <section id="book" class="py-24 md:py-36 bg-white rounded-3xl">
+            <div class="max-w-6xl mx-auto px-8 grid md:grid-cols-12 gap-10 items-center">
+
+                <!-- Left: CTA -->
+                <div class="md:col-span-5 space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold color-primary">Book a Session with Omoefe Orobator</h2>
+                <p class="text-lg text-gray-700">
+                    Get personalised financial guidance directly from Omoefe Orobator — Founder of Money Lit Africa, Certified Finance Analyst, Wealth Manager, and Chartered Accountant.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Popup button -->
+                    <button id="calendly-popup-btn" type="button"
+                    class="inline-block px-8 py-3 text-lg font-extrabold bg-secondary text-gray-900 rounded-xl hover:bg-amber-400 transition duration-300 custom-shadow">
+                    Book a Session (Popup)
+                    </button>
+
+                    <!-- Jump to inline embed -->
+                    <a href="#calendly-inline" class="inline-block px-8 py-3 text-lg font-bold color-primary border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition duration-300 text-center">
+                    View Calendar
+                    </a>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-3">
+                    If the widget doesn't load, <a href="https://calendly.com/omoefeorobator" target="_blank" rel="noopener noreferrer" class="underline">open Calendly here</a>.
+                </p>
+                </div>
+
+                <!-- Right: Benefits -->
+                <div class="md:col-span-7 bg-amber-50 p-8 rounded-2xl shadow-md">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">What You’ll Gain:</h3>
+                <ul class="space-y-4 text-lg text-gray-700 font-medium">
+                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Direct one-on-one session with Omoefe</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Tailored guidance on budgeting, investing, and building wealth</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Video call with notes, reminders, and follow-up</li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Inline Calendly embed -->
+            <div id="calendly-inline" class="max-w-4xl mx-auto mt-12 px-8">
+                <div id="calendly-embed" class="bg-white rounded-2xl overflow-hidden shadow-xl">
+                <div id="calendly-loading" class="p-8 text-center text-gray-600">
+                    Loading Omoefe’s calendar... If it takes too long, <a href="https://calendly.com/omoefeorobator" target="_blank" class="underline">open Calendly directly</a>.
+                </div>
+
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/omoefeorobator"
+                    style="min-height:650px;"></div>
+                </div>
+            </div>
+
+            <!-- Calendly Assets -->
+            <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print" onload="this.media='all'">
+            <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+
+            <script>
+                (function () {
+                const CALENDLY_SRC = 'https://assets.calendly.com/assets/external/widget.js';
+                let loaded = false;
+
+                function loadCalendly() {
+                    if (loaded) return;
+                    loaded = true;
+                    const s = document.createElement('script');
+                    s.src = CALENDLY_SRC;
+                    s.async = true;
+                    document.body.appendChild(s);
+                }
+
+                // Popup button (Booking with Omoefe)
+                document.addEventListener('click', function (e) {
+                    const btn = e.target.closest('#calendly-popup-btn');
+                    if (!btn) return;
+
+                    loadCalendly();
+                    const calendlyUrl = 'https://calendly.com/omoefeorobator';
+
+                    function openPopup() {
+                    if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                        window.Calendly.initPopupWidget({ url: calendlyUrl });
+                    } else {
+                        setTimeout(openPopup, 150);
+                    }
+                    }
+
+                    openPopup();
+                });
+
+                // Lazy load when inline section appears
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                        loadCalendly();
+                        obs.disconnect();
+                        }
+                    });
+                    }, { rootMargin: '200px' });
+
+                    observer.observe(document.getElementById('calendly-inline'));
+                } else {
+                    ['scroll', 'mousemove', 'touchstart'].forEach(ev => {
+                    window.addEventListener(ev, loadCalendly, { once: true });
+                    });
+                }
+                })();
+            </script>
+        </section>
+
 <?php include("footer.php"); ?>
