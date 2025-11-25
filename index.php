@@ -311,7 +311,7 @@
                     <!-- Popup button -->
                     <button id="calendly-popup-btn" type="button"
                     class="inline-block px-8 py-3 text-lg font-extrabold bg-secondary text-gray-900 rounded-xl hover:bg-amber-400 transition duration-300 custom-shadow">
-                    Book a Session (Popup)
+                    Book a Session
                     </button>
 
                     <!-- Jump to inline embed -->
