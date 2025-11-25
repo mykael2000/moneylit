@@ -296,115 +296,155 @@
                 </div>
             </div>
         </section>
-        <!-- Calendly Booking Section -->
-        <section id="book" class="py-24 md:py-36 bg-white rounded-3xl">
-            <div class="max-w-6xl mx-auto px-8 grid md:grid-cols-12 gap-10 items-center">
-
-                <!-- Left: CTA -->
-                <div class="md:col-span-5 space-y-6">
-                <h2 class="text-4xl md:text-5xl font-extrabold color-primary">Book a Session with Omoefe Orobator</h2>
-                <p class="text-lg text-gray-700">
-                    Get personalised financial guidance directly from Omoefe Orobator — Founder of Money Lit Africa, Certified Finance Analyst, Wealth Manager, and Chartered Accountant.
+        <!-- START: Calendly Booking Section (Full working block) -->
+        <section id="book" class="py-12 md:py-20 bg-white rounded-3xl">
+        <div class="max-w-[1200px] mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+            <!-- CTA -->
+            <div class="md:col-span-5 space-y-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold color-primary">Book a Session with Omoefe Orobator</h2>
+                <p class="text-gray-700">
+                Get personalised financial guidance directly from Omoefe — Founder of Money Lit Africa, Certified Finance Analyst & Wealth Manager.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Popup button -->
-                    <button id="calendly-popup-btn" type="button"
-                    class="inline-block px-8 py-3 text-lg font-extrabold bg-secondary text-gray-900 rounded-xl hover:bg-amber-400 transition duration-300 custom-shadow">
-                    Book a Session
-                    </button>
+                <div class="flex flex-wrap gap-3 mt-4">
+                <button id="calendly-popup-btn" type="button"
+                    class="px-6 py-3 rounded-xl font-bold bg-secondary text-gray-900 hover:bg-amber-400 transition">
+                    Book a Session (Popup)
+                </button>
 
-                    <!-- Jump to inline embed -->
-                    <a href="#calendly-inline" class="inline-block px-8 py-3 text-lg font-bold color-primary border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition duration-300 text-center">
+                <a href="#calendly-inline" class="px-6 py-3 rounded-xl font-bold border-2 border-primary inline-block hover:bg-primary hover:text-white transition">
                     View Calendar
-                    </a>
+                </a>
                 </div>
 
                 <p class="text-sm text-gray-500 mt-3">
-                    If the widget doesn't load, <a href="https://calendly.com/omoefeorobator" target="_blank" rel="noopener noreferrer" class="underline">open Calendly here</a>.
+                If the widget doesn't load, <a href="https://calendly.com/omoefeorobator" target="_blank" rel="noopener noreferrer" class="underline">open Calendly directly</a>.
                 </p>
-                </div>
+            </div>
 
-                <!-- Right: Benefits -->
-                <div class="md:col-span-7 bg-amber-50 p-8 rounded-2xl shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">What You’ll Gain:</h3>
-                <ul class="space-y-4 text-lg text-gray-700 font-medium">
-                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Direct one-on-one session with Omoefe</li>
-                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Tailored guidance on budgeting, investing, and building wealth</li>
-                    <li class="flex items-start"><span class="text-amber-500 mr-3 text-2xl">•</span> Video call with notes, reminders, and follow-up</li>
+            <!-- Benefits / Info -->
+            <div class="md:col-span-7 bg-amber-50 p-6 rounded-xl">
+                <ul class="space-y-3 text-gray-700 font-medium">
+                <li>• 30-min & 60-min session options</li>
+                <li>• Video call with reminders and notes</li>
+                <li>• Direct 1-on-1 with Omoefe Orobator</li>
                 </ul>
-                </div>
+            </div>
             </div>
 
-            <!-- Inline Calendly embed -->
-            <div id="calendly-inline" class="max-w-4xl mx-auto mt-12 px-8">
-                <div id="calendly-embed" class="bg-white rounded-2xl overflow-hidden shadow-xl">
+            <!-- INLINE CALENDLY - full width of content, responsive height -->
+            <div id="calendly-inline" class="w-full mt-8">
+            <div id="calendly-embed" class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div id="calendly-loading" class="p-8 text-center text-gray-600">
-                    Loading Omoefe’s calendar... If it takes too long, <a href="https://calendly.com/omoefeorobator" target="_blank" class="underline">open Calendly directly</a>.
+                Loading Omoefe’s calendar... If it takes a while, <a href="https://calendly.com/omoefeorobator" target="_blank" class="underline">open Calendly directly</a>.
                 </div>
 
-                <div class="calendly-inline-widget"
-                    data-url="https://calendly.com/omoefeorobator"
-                    style="min-height:650px;"></div>
+                <!-- Calendly widget: set width 100% and a high min-height to avoid inner scroll -->
+                <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/omoefeorobator"
+                style="width:100%; min-height:75vh; height:75vh; display:block; border:0;">
                 </div>
             </div>
+            </div>
+        </div>
 
-            <!-- Calendly Assets -->
-            <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print" onload="this.media='all'">
-            <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+        <!-- Calendly CSS (lazy-load friendly) -->
+        <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
 
-            <script>
-                (function () {
-                const CALENDLY_SRC = 'https://assets.calendly.com/assets/external/widget.js';
-                let loaded = false;
+        <script>
+            (function () {
+            const CALENDLY_SRC = 'https://assets.calendly.com/assets/external/widget.js';
+            let scriptLoaded = false;
 
-                function loadCalendly() {
-                    if (loaded) return;
-                    loaded = true;
-                    const s = document.createElement('script');
-                    s.src = CALENDLY_SRC;
-                    s.async = true;
-                    document.body.appendChild(s);
-                }
+            function loadCalendlyScript() {
+                if (scriptLoaded) return;
+                scriptLoaded = true;
+                const s = document.createElement('script');
+                s.src = CALENDLY_SRC;
+                s.async = true;
+                document.body.appendChild(s);
+            }
 
-                // Popup button (Booking with Omoefe)
-                document.addEventListener('click', function (e) {
-                    const btn = e.target.closest('#calendly-popup-btn');
-                    if (!btn) return;
+            // Popup button behavior
+            document.addEventListener('click', function (e) {
+                const btn = e.target.closest && e.target.closest('#calendly-popup-btn');
+                if (!btn) return;
+                loadCalendlyScript();
+                const url = 'https://calendly.com/omoefeorobator';
 
-                    loadCalendly();
-                    const calendlyUrl = 'https://calendly.com/omoefeorobator';
-
-                    function openPopup() {
-                    if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
-                        window.Calendly.initPopupWidget({ url: calendlyUrl });
-                    } else {
-                        setTimeout(openPopup, 150);
-                    }
-                    }
-
-                    openPopup();
-                });
-
-                // Lazy load when inline section appears
-                if ('IntersectionObserver' in window) {
-                    const observer = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                        loadCalendly();
-                        obs.disconnect();
-                        }
-                    });
-                    }, { rootMargin: '200px' });
-
-                    observer.observe(document.getElementById('calendly-inline'));
+                function openPopup() {
+                if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                    window.Calendly.initPopupWidget({ url });
                 } else {
-                    ['scroll', 'mousemove', 'touchstart'].forEach(ev => {
-                    window.addEventListener(ev, loadCalendly, { once: true });
-                    });
+                    setTimeout(openPopup, 150);
                 }
-                })();
-            </script>
+                }
+                openPopup();
+            });
+
+            // Resize iframe to avoid inner scrollbars
+            function setIframeSize(iframe) {
+                if (!iframe) return;
+                const vh = window.innerHeight || 800;
+                // Use 75% of viewport height but at least 600px
+                const target = Math.max(Math.round(vh * 0.75), 600);
+                iframe.style.height = target + 'px';
+                iframe.style.width = '100%';
+                iframe.style.border = '0';
+                iframe.style.display = 'block';
+            }
+
+            // Poll for Calendly iframe inside the .calendly-inline-widget and resize it
+            function pollForIframe(retries = 0) {
+                const iframe = document.querySelector('.calendly-inline-widget iframe');
+                if (iframe) {
+                // hide loading label once iframe exists
+                const loader = document.getElementById('calendly-loading');
+                if (loader) loader.style.display = 'none';
+
+                setIframeSize(iframe);
+                window.addEventListener('resize', () => setIframeSize(iframe));
+                return;
+                }
+                if (retries < 80) { // ~12s timeout
+                setTimeout(() => pollForIframe(retries + 1), 150);
+                } else {
+                // fallback: ensure widget container has reasonable height
+                const widget = document.querySelector('.calendly-inline-widget');
+                if (widget) {
+                    widget.style.minHeight = Math.max(Math.round((window.innerHeight || 800) * 0.6), 600) + 'px';
+                }
+                }
+            }
+
+            // Start lazy load: when section is near viewport or on first interaction
+            if ('IntersectionObserver' in window) {
+                const el = document.getElementById('calendly-inline');
+                const obs = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                    loadCalendlyScript();
+                    pollForIframe();
+                    observer.disconnect();
+                    }
+                });
+                }, { rootMargin: '300px' });
+                if (el) obs.observe(el);
+            } else {
+                ['scroll', 'mousemove', 'touchstart'].forEach(ev =>
+                window.addEventListener(ev, () => { loadCalendlyScript(); pollForIframe(); }, { once: true })
+                );
+            }
+
+            // Also attempt to poll after script loads (in case it was already added)
+            window.addEventListener('load', () => setTimeout(pollForIframe, 300));
+            })();
+        </script>
         </section>
+        <!-- END: Calendly Booking Section -->
+
 
 <?php include("footer.php"); ?>
