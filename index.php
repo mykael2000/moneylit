@@ -335,18 +335,16 @@
 
             <!-- INLINE CALENDLY - full width of content, responsive height -->
             <div id="calendly-inline" class="w-full mt-8">
-            <div id="calendly-embed" class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div id="calendly-loading" class="p-8 text-center text-gray-600">
-                Loading Omoefe’s calendar... If it takes a while, <a href="https://calendly.com/omoefeorobator" target="_blank" class="underline">open Calendly directly</a>.
+                <div id="calendly-embed" class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div id="calendly-loading" class="p-8 text-center text-gray-600">
+                    Loading Omoefe’s calendar... If it takes a while, <a href="https://calendly.com/omoefeorobator" target="_blank" class="underline">open Calendly directly</a>.
+                    </div>
+                    <div
+                    class="calendly-inline-widget"
+                    data-url="https://calendly.com/omoefeorobator"
+                    style="width:100%; min-height:75vh; height:75vh; display:block; border:0;">
+                    </div>
                 </div>
-
-                <!-- Calendly widget: set width 100% and a high min-height to avoid inner scroll -->
-                <div
-                class="calendly-inline-widget"
-                data-url="https://calendly.com/omoefeorobator"
-                style="width:100%; min-height:75vh; height:75vh; display:block; border:0;">
-                </div>
-            </div>
             </div>
         </div>
 
