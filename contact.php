@@ -36,9 +36,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = "Please enter a valid email address.";
 }
 
-if ($message === '' || strlen($message) < 5) {
-    $errors[] = "Message must be at least 5 characters.";
-}
 
 // If errors exist, return a response
 if (!empty($errors)) {
