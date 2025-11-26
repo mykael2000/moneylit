@@ -47,16 +47,16 @@ try {
 
     // SMTP configuration — Update this section!
     $mail->isSMTP();
-    $mail->Host       = 'mail.federalfirstcapitalunion.com';  
+    $mail->Host       = 'mail.moneylitafrica.com';  
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'support@federalfirstcapitalunion.com'; 
+    $mail->Username   = 'support@moneylitafrica.com'; 
     $mail->Password   = 'YOUR_SMTP_PASSWORD';  // <-- Replace
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl'
     $mail->Port       = 465;
 
     // Email headers
-    $mail->setFrom('support@federalfirstcapitalunion.com', 'Website Contact Form');
-    $mail->addAddress('support@federalfirstcapitalunion.com', 'Admin'); 
+    $mail->setFrom('support@moneylitafrica.com', 'Website Contact Form');
+    $mail->addAddress('support@moneylitafrica.com', 'Admin'); 
     $mail->addReplyTo($email, $name);
 
     // Email content
