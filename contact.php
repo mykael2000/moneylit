@@ -58,6 +58,7 @@ try {
     // Email headers
     $mail->setFrom('support@moneylitafrica.com', 'Website Contact Form');
     $mail->addAddress('support@moneylitafrica.com', 'Admin'); 
+    $mail->addCC($email, $name); 
     $mail->addReplyTo($email, $name);
 
     // Email content
