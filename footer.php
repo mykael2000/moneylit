@@ -8,33 +8,7 @@
     </footer>
 
     <script>
-        // --- JavaScript for Form Handling and Interactivity ---
-
-        // 1. Handle Contact Form Submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const name = form.name.value;
-            const messageDisplay = document.getElementById('contact-message');
-
-            // Log data to console (simulating submission)
-            console.log('--- Contact Form Submission (Simulated) ---');
-            console.log('Name:', form.name.value);
-            console.log('Email:', form.email.value);
-            console.log('Message:', form.message.value);
-
-            // Display success message to the user
-            messageDisplay.textContent = 'Success! Thank you, ' + name.split(' ')[0] + '! Your message has been received.';
-            messageDisplay.classList.remove('hidden', 'text-gray-800');
-            messageDisplay.classList.add('text-green-600', 'font-extrabold');
-            form.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                messageDisplay.classList.add('hidden');
-            }, 5000);
-        });
-
+        
         // 2. Handle Newsletter Form Submission
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
