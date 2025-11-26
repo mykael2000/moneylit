@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Load PHPMailer via Composer
 require_once __DIR__ . '/vendor/phpmailer/phpmailer/<actual-subpath>/src/PHPMailer.php';
 require_once __DIR__ . '/vendor/phpmailer/phpmailer/<actual-subpath>/src/SMTP.php';
@@ -8,9 +12,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-// Enable error reporting during development (optional)
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
 
 // Only process POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
