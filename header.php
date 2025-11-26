@@ -55,6 +55,7 @@
                     class="hover:text-amber-500 transition duration-300">
                     ON FINANCE
                 </a>
+                <a href="index.php" class="hover:text-amber-500 transition duration-300">Homepage</a>
                 <a href="#about" class="hover:text-amber-500 transition duration-300">About Omoefe</a>
                 <a href="educators.php" class="hover:text-amber-500 transition duration-300">Educators</a>
                 <a href="#vision" class="hover:text-amber-500 transition duration-300">Vision</a>
