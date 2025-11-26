@@ -30,5 +30,7 @@ if (!class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
     error_log("PHPMailer loader: class still missing after trying paths: " . implode(', ', $tried));
     // You can optionally die with a friendly message while debugging:
     // die('PHPMailer class could not be loaded - check logs.');
+}else{
+    echo "success";
 }
 ?>
