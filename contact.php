@@ -48,7 +48,7 @@ try {
 
     // SMTP configuration — Update this section!
     $mail->isSMTP();
-    $mail->Host       = 'mail.moneylitafrica.com';  
+    $mail->Host       = 'moneylitafrica.com';  
     $mail->SMTPAuth   = true;
     $mail->Username   = 'support@moneylitafrica.com'; 
     $mail->Password   = 'mY5343@LITae';  // <-- Replace
