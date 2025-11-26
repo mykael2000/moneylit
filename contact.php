@@ -3,39 +3,94 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$autoloadPath = __DIR__ . '/vendor/autoload.php';
-if (!file_exists($autoloadPath)) {
-    // Fatal: autoload missing
-    header('HTTP/1.1 500 Internal Server Error');
-    echo 'Autoload not found at: ' . htmlspecialchars($autoloadPath);
-    error_log('contact.php error: autoload not found at ' . $autoloadPath);
+echo "<h2>PHPMailer debug</h2>";
+$base = __DIR__;
+echo "<p>Base dir: " . htmlspecialchars($base) . "</p>";
+
+$autoload = $base . '/vendor/autoload.php';
+echo "<p>Checking autoload at: <code>$autoload</code></p>";
+if (file_exists($autoload)) {
+    echo "<p style='color:green'>autoload.php FOUND</p>";
+    require_once $autoload;
+} else {
+    echo "<p style='color:red'>autoload.php NOT FOUND</p>";
     exit;
 }
 
-require_once $autoloadPath;
-
-if (!class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
-    // Attempt manual include as fallback
-    $fallback = __DIR__ . '/vendor/phpmailer/phpmailer/src/';
-    $files = ['PHPMailer.php', 'SMTP.php', 'Exception.php'];
-    $missing = false;
-    foreach ($files as $f) {
-        $p = $fallback . $f;
-        if (file_exists($p)) {
-            require_once $p;
-        } else {
-            $missing = true;
-            error_log("contact.php fallback: missing file $p");
+// Check composer packages listing for phpmailer
+$pmPath = $base . '/vendor/phpmailer/phpmailer';
+echo "<p>PHPMailer package path: <code>$pmPath</code></p>";
+if (is_dir($pmPath)) {
+    echo "<p style='color:green'>phpmailer directory FOUND</p>";
+    echo "<p>Listing files:</p><ul>";
+    $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($pmPath));
+    $count = 0;
+    foreach ($it as $file) {
+        if ($file->isFile()) {
+            $rel = str_replace($base . '/', '', $file->getPathname());
+            echo "<li>" . htmlspecialchars($rel) . "</li>";
+            $count++;
         }
     }
-    if ($missing && !class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
-        header('HTTP/1.1 500 Internal Server Error');
-        echo 'PHPMailer classes could not be loaded. Check vendor/phpmailer/phpmailer/src/ files.';
-        error_log('contact.php fatal: PHPMailer classes not found after fallback require.');
-        exit;
-    }
+    if ($count === 0) echo "<li>(no files found)</li>";
+    echo "</ul>";
+} else {
+    echo "<p style='color:red'>phpmailer directory NOT found at expected location.</p>";
 }
 
+// Check the main class files
+$files = [
+    $base . '/vendor/phpmailer/phpmailer/src/PHPMailer.php',
+    $base . '/vendor/phpmailer/phpmailer/src/SMTP.php',
+    $base . '/vendor/phpmailer/phpmailer/src/Exception.php'
+];
+
+foreach ($files as $f) {
+    echo "<p>Checking <code>$f</code>: ";
+    if (file_exists($f)) {
+        echo "<strong style='color:green'>FOUND</strong>";
+        echo " — readable: " . (is_readable($f) ? "<strong style='color:green'>yes</strong>" : "<strong style='red'>no</strong>");
+    } else {
+        echo "<strong style='color:red'>MISSING</strong>";
+    }
+    echo "</p>";
+}
+
+// Check class existence via autoloader
+$classes = [
+    'PHPMailer\PHPMailer\PHPMailer',
+    'PHPMailer\PHPMailer\SMTP',
+    'PHPMailer\PHPMailer\Exception'
+];
+
+echo "<h3>class_exists checks</h3><ul>";
+foreach ($classes as $c) {
+    $exists = class_exists($c, true) ? "<strong style='color:green'>YES</strong>" : "<strong style='color:red'>NO</strong>";
+    echo "<li>" . htmlspecialchars($c) . " : $exists</li>";
+}
+echo "</ul>";
+
+// If classes not found, attempt manual require and check again
+if (!class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
+    echo "<h3>Attempting manual require of src files...</h3>";
+    foreach ($files as $f) {
+        if (file_exists($f)) {
+            require_once $f;
+            echo "<p>Required " . htmlspecialchars($f) . "</p>";
+        }
+    }
+    echo "<h4>Re-check classes after manual require</h4><ul>";
+    foreach ($classes as $c) {
+        $exists = class_exists($c, true) ? "<strong style='color:green'>YES</strong>" : "<strong style='color:red'>NO</strong>";
+        echo "<li>" . htmlspecialchars($c) . " : $exists</li>";
+    }
+    echo "</ul>";
+}
+
+echo "<p>PHP version: " . phpversion() . "</p>";
+echo "<p>Loaded extensions: <code>" . implode(', ', get_loaded_extensions()) . "</code></p>";
+
+echo "<p>Check Apache error log at: <code>" . htmlspecialchars($_SERVER['DOCUMENT_ROOT'] . '/xampp/apache/logs/error.log') . "</code> (path may vary)</p>";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
