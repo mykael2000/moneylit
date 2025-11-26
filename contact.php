@@ -42,7 +42,7 @@ if ($message === '' || strlen($message) < 5) {
 
 // If errors exist, return a response
 if (!empty($errors)) {
-    header("Location: index.php?error=" . urlencode($errors));
+    header("Location: index.php?error=" . urlencode("$errors"));
     exit;
 }
 
