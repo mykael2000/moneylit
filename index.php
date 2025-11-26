@@ -248,6 +248,11 @@
 
                 <!-- Contact Form - High Contrast Card -->
                 <div class="md:col-span-7">
+                    <?php if (isset($_GET['error'])): ?>
+                        <p id="contact-message" class="mt-4 text-center text-sm font-bold text-red-600">
+                            <?= htmlspecialchars($_GET['error']); ?>
+                        </p>
+                    <?php endif; ?>
                     <form action="" method="POST" id="contact-form" class="space-y-6 bg-white p-8 rounded-3xl shadow-2xl custom-shadow">
                         <h3 class="text-3xl font-bold color-primary mb-4">Send a Message</h3>
                         <div>
