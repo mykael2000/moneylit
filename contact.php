@@ -3,8 +3,38 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Load PHPMailer via Composer
-require __DIR__ . '/vendor/autoload.php';
+$autoloadPath = __DIR__ . '/vendor/autoload.php';
+if (!file_exists($autoloadPath)) {
+    // Fatal: autoload missing
+    header('HTTP/1.1 500 Internal Server Error');
+    echo 'Autoload not found at: ' . htmlspecialchars($autoloadPath);
+    error_log('contact.php error: autoload not found at ' . $autoloadPath);
+    exit;
+}
+
+require_once $autoloadPath;
+
+if (!class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
+    // Attempt manual include as fallback
+    $fallback = __DIR__ . '/vendor/phpmailer/phpmailer/src/';
+    $files = ['PHPMailer.php', 'SMTP.php', 'Exception.php'];
+    $missing = false;
+    foreach ($files as $f) {
+        $p = $fallback . $f;
+        if (file_exists($p)) {
+            require_once $p;
+        } else {
+            $missing = true;
+            error_log("contact.php fallback: missing file $p");
+        }
+    }
+    if ($missing && !class_exists('PHPMailer\PHPMailer\PHPMailer', false)) {
+        header('HTTP/1.1 500 Internal Server Error');
+        echo 'PHPMailer classes could not be loaded. Check vendor/phpmailer/phpmailer/src/ files.';
+        error_log('contact.php fatal: PHPMailer classes not found after fallback require.');
+        exit;
+    }
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
