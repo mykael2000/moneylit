@@ -54,7 +54,7 @@ try {
     $mail->Host       = 'mail.moneylitafrica.com';  
     $mail->SMTPAuth   = true;
     $mail->Username   = 'support@moneylitafrica.com'; 
-    $mail->Password   = 'YOUR_SMTP_PASSWORD';  // <-- Replace
+    $mail->Password   = 'mY5343@LITae';  // <-- Replace
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // 'ssl'
     $mail->Port       = 465;
 
