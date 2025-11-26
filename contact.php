@@ -78,7 +78,7 @@ try {
     exit;
 
 } catch (Exception $e) {
-    header("Location: index.php?error=" . urlencode("Message could not be sent."));
+    header("Location: index.php?error=" . urlencode("Message could not be sent.$mail->ErrorInfo"));
     exit;
 }
 
