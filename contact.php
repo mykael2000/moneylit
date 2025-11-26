@@ -18,7 +18,7 @@ if (file_exists($autoload)) {
 }
 
 // Check composer packages listing for phpmailer
-$pmPath = $base . '/vendor/phpmailer/phpmailer';
+$pmPath = $base . '/vendor/phpmailer/phpmailer/src';
 echo "<p>PHPMailer package path: <code>$pmPath</code></p>";
 if (is_dir($pmPath)) {
     echo "<p style='color:green'>phpmailer directory FOUND</p>";
