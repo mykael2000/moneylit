@@ -12,7 +12,7 @@ use PHPMailer\PHPMailer\Exception;
 // Only process POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
-    echo "Method Not Allowed";
+    header("Location: index.php?error=" . urlencode("Method Not Allowed"));
     exit;
 }
 
@@ -38,7 +38,7 @@ if ($message === '' || strlen($message) < 5) {
 
 // If errors exist, return a response
 if (!empty($errors)) {
-    echo "<p style='color:red; font-weight:bold;'>" . implode("<br>", $errors) . "</p>";
+    header("Location: index.php?error=" . urlencode($errors));
     exit;
 }
 
